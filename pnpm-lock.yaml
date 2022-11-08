@@ -7,6 +7,7 @@ specifiers:
   '@tailwindcss/typography': ^0.5.8
   '@vitejs/plugin-vue': ^3.2.0
   autoprefixer: ^10.4.13
+  date-fns: ^2.29.3
   mande: ^2.0.3
   postcss: ^8.4.18
   tailwindcss: ^3.2.2
@@ -16,6 +17,7 @@ specifiers:
 dependencies:
   '@headlessui/vue': 1.7.4_vue@3.2.41
   '@heroicons/vue': 2.0.13_vue@3.2.41
+  date-fns: 2.29.3
   mande: 2.0.3
   vue: 3.2.41
 
@@ -320,6 +322,11 @@ packages:
 
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
+
+  /date-fns/2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+    engines: {node: '>=0.11'}
+    dev: false
 
   /defined/1.0.1:
     resolution: {integrity: sha512-hsBd2qSVCRE+5PmNdHt1uzyrFu5d3RwmFDKzyNZMFq/EwDNJF7Ee5+D5oEKF0hU6LhtoUF1macFvOe4AskQC1Q==}
