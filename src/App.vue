@@ -15,7 +15,7 @@ const tabs = [
 <template>
   <div class="min-h-full bg-gray-100">
   
-    <div class="py-10">
+    <div class="py-4">
       <div class="mx-auto max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-12 lg:gap-8 lg:px-8">
         <NavSidebar></NavSidebar>
         
