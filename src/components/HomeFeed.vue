@@ -11,7 +11,10 @@ import {
   ShareIcon,
   StarIcon,
 } from '@heroicons/vue/20/solid'
-import {mande, defaults } from "mande";
+import { mande, defaults } from "mande";
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
+import parseJSON from 'date-fns/parseJSON';
+import { de } from 'date-fns/locale'
 
 const BASE_URL = 'https://norden.social';
 const appsApi = mande(`${BASE_URL}/api/v1/apps`);
@@ -70,7 +73,7 @@ console.log(timeline);
 
                 <p class="text-sm text-gray-500">
                   <a :href="entry.url" class="hover:underline">
-                    <time :datetime="entry.created_at">{{ entry.created_at }}</time>
+                    <time :datetime="entry.created_at">{{ formatDistanceToNow(parseJSON(entry.created_at), { locale: de }) }}</time>
                   </a>
                 </p>
               </div>
