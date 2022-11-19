@@ -7,6 +7,8 @@ import NavSidebar from "./components/NavSidebar.vue";
 import HomeFeed from "./components/HomeFeed.vue";
 import { PencilIcon as PencilIconOutline } from "@heroicons/vue/24/outline";
 import TootDialog from "./components/TootDialog.vue";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
 
 const tabs = [
   { name: "Home", href: "#", current: true },
@@ -27,9 +29,15 @@ const isTootDialogOpen = ref(false);
 
         <main class="lg:col-span-9 xl:col-span-6">
           <div class="px-4 sm:px-0">
-            <div class="sm:block">
+            <div class="flex gap-3">
+              <img
+                class="inline-block h-9 w-9 rounded-full lg:hidden"
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+
               <nav
-                class="isolate flex divide-x divide-gray-200 rounded-lg shadow"
+                class="isolate flex divide-x divide-gray-200 rounded-lg shadow grow"
                 aria-label="Tabs"
               >
                 <a
@@ -56,6 +64,20 @@ const isTootDialogOpen = ref(false);
                   />
                 </a>
               </nav>
+
+              <Popover as="template" v-slot="{ open }">
+                <PopoverButton
+                  class="-mx-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-rose-500"
+                >
+                  <span class="sr-only">Open menu</span>
+                  <Bars3Icon
+                    v-if="!open"
+                    class="block h-6 w-6"
+                    aria-hidden="true"
+                  />
+                  <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
+                </PopoverButton>
+              </Popover>
             </div>
           </div>
 
