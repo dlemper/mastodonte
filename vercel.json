@@ -1,6 +1,6 @@
 {
   "redirects": [
-    { "source": "/.*", "destination": "/index.html", "statusCode": 200 }
+    { "source": "/:path(.*)", "destination": "/index.html", "statusCode": 200 }
   ],
   "headers": [
     {
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "source": "/assets/.*",
+      "source": "/assets/:path(.*)",
       "headers": [
         {
           "key": "Cache-Control",
