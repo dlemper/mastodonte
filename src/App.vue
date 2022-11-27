@@ -4,7 +4,6 @@ import NewToot from "./components/NewToot.vue";
 import SearchInput from "./components/SearchInput.vue";
 import AvatarProfile from "./components/AvatarProfile.vue";
 import NavSidebar from "./components/NavSidebar.vue";
-import HomeFeed from "./components/HomeFeed.vue";
 import { PencilIcon as PencilIconOutline } from "@heroicons/vue/24/outline";
 import TootDialog from "./components/TootDialog.vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
@@ -87,7 +86,7 @@ const isTootDialogOpen = ref(false);
           </div>
 
           <Suspense>
-            <HomeFeed></HomeFeed>
+            <RouterView></RouterView>
 
             <template #fallback> Loading... </template>
           </Suspense>
