@@ -35,10 +35,14 @@ timeline.value = await timelinesApi.get("home");
         class="bg-white px-4 py-6 shadow sm:rounded-lg sm:p-6"
       >
         <article :aria-labelledby="'entry-title-' + entry.id">
-          <span class="pl-12 text-gray-400 text-xs" v-if="entry.reblog">
+          <a
+            class="pl-12 text-gray-400 text-xs"
+            v-if="entry.reblog"
+            :href="entry.account.url"
+          >
             <ArrowPathIcon class="w-3 h-3 inline"></ArrowPathIcon>
             {{ entry.account.display_name }}
-          </span>
+          </a>
 
           <div>
             <div class="flex space-x-3">
